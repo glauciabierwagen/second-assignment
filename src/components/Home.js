@@ -2,20 +2,25 @@ import About from "./About";
 import Header from "./Header";
 import Button from "./Button";
 import Footer from "./Footer";
+
+
 //import ReusableButton from "./ReusableButton";
 
 const Home = () => {
-    return ( 
-      <Header />
-      /*<div className="container">
-          <h1> Home</h1>
+  return ( 
+  <main>
+    <Header />
+      <div id="menu" className="container">
+       
+      
+          <h1> I'M Gláucia Silva Bierwagen</h1>
           <p> This is Home Page</p>
-          <ReusableButton> Home Page Button </ReusableButton>
-          <About />
-          <ReusableButton> About Page </ReusableButton>
-          <Footer />
-      </div>*/
-    );  
+       
+    </div> 
+    <Footer />
+    </main>
+   
+  );  
 };
 
 export default Home;

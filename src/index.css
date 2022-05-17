@@ -70,13 +70,45 @@ section {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  background: #333;
-  color: #fff;
+  background: rgb(253, 253, 253);
   cursor: pointer;
-  font-size: 2.5rem;
   padding: 1rem 1.5rem;
   z-index: 1000;
   display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+  margin-top:23rem;
+}
+
+  
+.h3 {
+  font-size: 20px;
+  color: #fff;
+}
+  
+.h1 {
+  font-size: 30px;
+  color: rgb(116, 113, 113);
+}
+  
+.h1 span {
+  color: var(--yellow);
+}
+  
+.p {
+  font-size: 3rem;
+  color: rgb(116, 113, 113);
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+  
+.line{
+  color:#1abc9c;
 }
 
 /* media queries  */
@@ -256,3 +288,4 @@ header .navbar ul li a:hover {
   max-width:250px;
   margin-bottom: 20px;
 }
+

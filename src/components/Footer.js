@@ -1,6 +1,11 @@
 const Footer = () => {
-    return  
-      <footer> This is our footer </footer>;
+  return  ( 
+    <footer>
+      <p>
+        All Rights Reserved - Gláucia Bierwagen
+      </p>
+    </footer>
+  );
 };
 
 export default Footer;
