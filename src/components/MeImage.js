@@ -1,9 +1,9 @@
-import Me from "./images/glaucia.png";
+import Me from "../images/me.png";
 
 const ImageDisplay = () => {
     return (
     <div>
-         <img className="image" src={Me} alt="Gláucia's image"/> 
+        <img className="card_img" src={Me} alt="Gláucia's image"/> 
     </div>
     );  
 };
