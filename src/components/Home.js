@@ -1,3 +1,4 @@
+import Button from "./Button";
 import ImageDisplay from "./MeImage";
 
 const Home = () => {
@@ -9,9 +10,10 @@ const Home = () => {
           <div className="card__content">
             <h2 className="card__title">My name is Gláucia</h2>
               <p className="card__info">
-                Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. 
-                Donec viverra eleifend lacus, vitae ullamcor.
+                "I believe that learning is the creation of possibilities, discovery, 
+                the exercise of imagination and enchantment with the things of life." 
               </p>
+              
           </div>
         </div>
       <div className="card"> 
@@ -23,7 +25,9 @@ const Home = () => {
       </div>
     </div>
   </div>
+  
   </main>
+ 
   );
 };
 

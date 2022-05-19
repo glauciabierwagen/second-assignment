@@ -1,6 +1,8 @@
-const Button = () => {
+function Button () {
     return  
-      <button> This is a button </button>;
+      <div className="btn"> 
+      <button> About me </button>;
+      </div>
 };
 
 export default Button;

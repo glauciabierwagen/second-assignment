@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import AboutPage from "./components/AboutPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,7 +18,12 @@ function App() {
           <Route path="/about/:pageId" element={<AboutPage />} />
         </Routes>
       </div>
+      <div>
+        <Footer />
+      </div>
     </BrowserRouter>
+    
+    
   );
 }
 
