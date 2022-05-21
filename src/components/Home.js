@@ -1,9 +1,15 @@
-import Button from "./Button";
-import ImageDisplay from "./MeImage";
+import { Link } from 'react-router-dom';
+import BtnAbout from "./Btnbout";
+import ImageDisplay from "./images/MeImage";
+import Button from 'react-bootstrap/Button';
+import About from "./About";
+import AboutPage from './pages/AboutPage';
+import Btn from "./reusablecomponents/Btn";
+
 
 const Home = () => {
   return (
-    <main> 
+  <main> 
   <div className="layout_main"> 
     <div className="home_cont">
     <div className="card">
@@ -13,8 +19,9 @@ const Home = () => {
                 "I believe that learning is the creation of possibilities, discovery, 
                 the exercise of imagination and enchantment with the things of life." 
               </p>
-              
+               
           </div>
+          
         </div>
       <div className="card"> 
         <div className="card__content"> 
@@ -24,9 +31,26 @@ const Home = () => {
         </div>
       </div>
     </div>
+    <div className="home_about2">
+        <div> 
+          <div> 
+            <div>
+          
+            <div>  <Button  href="./about" element={<About />} variant="info" size="md" enabled> About me </Button>  </div>                   
+            </div>
+          </div>
+        </div>
+         
+    </div>   
   </div>
+                          
+                         
+                           
+    
+
   
   </main>
+  
  
   );
 };

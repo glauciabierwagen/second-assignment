@@ -1,9 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/reusablecomponents/Header";
 import Home from "./components/Home";
 import About from "./components/About";
-import AboutPage from "./components/AboutPage";
-import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import AboutPage from "./components/pages/AboutPage";
+import ContactPage from "./components/pages/ContactPage";
+import Footer from "./components/reusablecomponents/Footer";
+import Modal from "./components/Modal";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   return (
@@ -16,12 +22,17 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" exact element={<About />} />
           <Route path="/about/:pageId" element={<AboutPage />} />
+          <Route path="/contact" exact element={<Contact />} />
+          <Route path="/contact/:pageContactId" element={<ContactPage />} />
         </Routes>
       </div>
       <div>
         <Footer />
       </div>
+     
+
     </BrowserRouter>
+    
     
     
   );

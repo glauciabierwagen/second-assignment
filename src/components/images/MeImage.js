@@ -1,4 +1,4 @@
-import Me from "../images/me.png";
+import Me from "./me.png";
 
 const ImageDisplay = () => {
     return (
@@ -9,3 +9,4 @@ const ImageDisplay = () => {
 };
 
 export default ImageDisplay;
+
