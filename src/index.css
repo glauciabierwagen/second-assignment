@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
+/*Styling Body, Header, Footer, HomePage, AboutPage, ContactPage */
 * {
   margin: 0;
   padding: 0;
@@ -16,22 +18,21 @@ body {
 }
 
 .container {
-  margin: 2rem;
+  margin: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-p {
-  margin: 2rem;
-}
+/*Styling Header*/
 
 .header {
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   background-color: #1abc9c;
   padding: 0 10%;
+  font-size: 1.5rem;
 }
 
 .header nav {
@@ -61,15 +62,15 @@ p {
 .header li:hover,
 .header li:active,
 .header li.active {
-  color: #fe8e27;
+  color: #fef027;
   padding-bottom: 0.25rem;
-  border-bottom: 4px solid #dd6b00;
+  border-bottom: 4px solid #f8f687;
   cursor: pointer;
 }
 
 .links:hover,
 .links:active {
-  color: #fe8e27;
+  color: #fef027;
 }
 
 .link__list li {
@@ -94,7 +95,6 @@ p {
 main {
   width: 100%;
   min-height: 90vh;
-  /*background: linear-gradient(180deg, rgb(201, 233, 245) 0%, rgb(247, 199, 247) 35%, rgb(242, 243, 243) 100%);*/   
   border-radius: 5%; 
   display: flex;
   justify-content: center;
@@ -107,7 +107,7 @@ main {
   display: flex;
   flex-direction: row;
   margin: 0px 10px;
-  background-color:  linear-gradient(180deg, rgb(201, 233, 245) 0%, rgb(221, 255, 244) 35%, rgb(242, 243, 243) 100%);;  
+  /*background-color:  linear-gradient(180deg, rgb(201, 233, 245) 0%, rgb(221, 255, 244) 35%, rgb(242, 243, 243) 100%);;*/  
 
 }
 
@@ -117,7 +117,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0px 10px;
-  background-color:  linear-gradient(180deg, rgb(201, 233, 245) 0%, rgb(221, 255, 244) 35%, rgb(242, 243, 243) 100%);; 
+  /*background-color:  linear-gradient(180deg, rgb(201, 233, 245) 0%, rgb(221, 255, 244) 35%, rgb(242, 243, 243) 100%);;*/ 
   align-content: center; 
 
 }
@@ -147,16 +147,14 @@ main {
   padding-top: 35px;
 }
   
-
-.card {
+.card{
   margin-top: 15 px;
   max-width: 500px;
-  max-height: 150px;
+  max-height: 450px;
   background-color:rgba(144,  203,  44,  0.4);
   backdrop-filter: blur(14px);
   background: linear-gradient(73deg, rgb(201, 233, 245) 12%, rgb(252, 229, 252) 15%, rgb(254, 255, 255) 100%); 
-  
-  /*background-color:  linear-gradient(0deg, rgb(201, 233, 245) 0%, rgb(164, 250, 221) 35%, rgb(242, 243, 243) 100%);;*/
+  border-radius: 10px 5% / 20px 25em 30px 35em;
 }
 
 .card__title {
@@ -181,7 +179,6 @@ main {
   font-weight: normal;
   font-size: 22px;
   line-height: 34px;
-  color: #5f5b5b;
   margin-top: 47px;
 }
 
@@ -211,8 +208,6 @@ img {
   text-transform: capitalize;
 }
   
-
-
 /*Styling AboutPage*/
 
 .abouts {
@@ -233,19 +228,15 @@ img {
   top: 30px;
 }
 
-
 /*Styling Footer*/
 
-/*footer {
-  position: relative;
-  bottom: -0px;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-}*/
+.footer {
+  width: 100%;
+  height: 6rem;
+  background-color: #1abc9c;
+  padding: 0 10%;
+  font-size: 1.5rem;
+}
 
 .footer ul {
   list-style: none;
@@ -259,31 +250,6 @@ img {
   text-decoration: none;
 }
 
-.logo_footer {
- 
-  margin-left: 5px;
-  font-size: 20px;
-  color: #FFFFFF;
-  font-family: Baloo, cursive;
-  letter-spacing: 1.5;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 2px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.logo_footer {
-  width: 2rem;
-  position: relative;
-  top:5px;
-}
-
-.footer_layout {
-  display: flex;
-  justify-content: space-between;
-}
-
-
 /*Styling Contact*/
 
 .contact .row {
@@ -295,135 +261,14 @@ img {
   flex-direction: column;
   }
 
-  /*Modals/
+  .row {
+    top: 70 px;
+    bottom: 50px;
+  }
 
-  /* @src/components/Modal.module.css */
-
-.darkBG {
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-}
-
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.modal {
-  width: 250px;
-  height: 170px;
-  background: white;
-  color: white;
-  z-index: 10;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-}
-
-.modalHeader {
-  height: 50px;
-  background: white;
-  overflow: hidden;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.heading {
-  margin: 0;
-  padding: 10px;
-  color: #2c3e50;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-}
-
-.modalContent {
-  padding: 10px;
-  font-size: 14px;
-  color: #2c3e50;
-  text-align: center;
-}
-
-.modalActions {
-  position: absolute;
-  bottom: 2px;
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.actionsContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.closeBtn {
-  cursor: pointer;
-  font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 8px;
-  border: none;
-  font-size: 18px;
-  color: #2c3e50;
-  background: white;
-  transition: all 0.25s ease;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
-  position: absolute;
-  right: 0;
-  top: 0;
-  align-self: flex-end;
-  margin-top: -7px;
-  margin-right: -7px;
-}
-
-.closeBtn:hover {
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-  transform: translate(-4px, 4px);
-}
-
-.deleteBtn {
-  margin-top: 10px;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 11px 28px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  border: none;
-  color: #fff;
-  background: #ff3e4e;
-  transition: all 0.25s ease;
-}
-
-.deleteBtn:hover {
-  box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
-  transform: translateY(-5px);
-  background: #ff3e4e;
-}
-
-.cancelBtn {
-  margin-top: 10px;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 11px 28px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  border: none;
-  color: #2c3e50;
-  background: #fcfcfc;
-  transition: all 0.25s ease;
-}
-
-.cancelBtn:hover {
-  box-shadow: none;
-  transform: none;
-  background: whitesmoke;
-}
-
-
+  .label_name {
+    color: #1abc9c;
+    font: Poppins, Sans Pro;
+    font-size: large;
+ 
+  }

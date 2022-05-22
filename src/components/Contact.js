@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from 'react-bootstrap/Button';
-import ModalComponent from "./Modal";
-
+import ModalApp from "./Modal/ModalText";
 
 function Contact() {
-    const [firstName, setFirstName] = useState("");
+    const [firstName, setFirstName] = useState(""); {/* Use state() is a hook that allows you to have state variables in functional components.*/}
 
+    {/* handdleSubmi is a function that will receive the form data if form validation is successful.*/}
     const { register, 
         handleSubmit = (e) => {
             e.preventDefault();
@@ -14,55 +14,59 @@ function Contact() {
             setFirstName("");
             setReply("");
             setTextarea("");}
- } = useForm();
+ } = useForm(); {/* useForm() is custom hook for managing forms with ease. It takes optional arguments*/}
  
-    const [data, setData] = useState("");
+    const [inputdata, setData] = useState("");
     const [reply, setReply] = useState("");
     const [textarea, setTextarea] = useState(
-        "The content of a textarea is about you"
+        "Your message"
       );
-
+    
+    {/* The handleChange function simply takes an event as a parameter, whereby we get the current value of the input*/}
     const handleChange = (event) => {
         setTextarea(event.target.value)
     };
-
-
+     {/* Attempting to apply form deletion after submission of data*/}
+    const handleReset = () => {
+        document.querySelectorAll('input');
+        this.setData({inputdata});
+        this.setFirsName({firstName});
+        this.setReply({reply});
+        this.setTextarea({textarea});
+    };
 
   return (
     <main className='contact'> 
        <div className="contact"> 
        <h2 style={{color: "#1abc9c", font: "Poppins", weight: "lighter" }}>Leave a message!</h2>
-            <form onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
-                <div style={{top: "40px", color: "#1abc9c", font: "Poppins", weight: "lighter" }}> 
+            <form onSubmit={handleSubmit((inputdata) => setData(JSON.stringify(inputdata)))}>  {/* Form*/}
+                <div className="label_name row">  {/* Item Name*/}
                     <label htmlFor="firstName"> Name </label>
-                        <input {...register("firstName")} placeholder="Name"
+                        <input {...register(`Message sent! Name:`)} placeholder="Name"
                             onChange={(e) => setFirstName(e.target.value)}
                             type="text"
-                           
                         /> 
                 </div>
-                <div style={{top: "40px", color: "#1abc9c", font: "Poppins", weight: "lighter" }}> 
+                <div className="label_name row"> {/* Item Email*/} 
                     <label htmlFor="reply"> Email </label>
-                        <input {...register("reply")} placeholder="Email"
-
+                        <input {...register("Email:")} placeholder="Email"
                             type='email'
-                            name='reply'
                             value={reply}
                             onChange={(e) => setReply(e.target.value)}
                          />
                 </div>
-                <div style={{color: "#1abc9c", font: "Poppins, Sans Pro", weight: "lighter" }}> 
-                    <label htmlFor="reply"> Message </label>
-                        <textarea 
-                             {...register("aboutYou")}
-                            value={textarea} autoComplete="off" onChange={handleChange} />
+                <div className="label_name row"> {/* Item Message*/} 
+                    <label htmlFor="textarea"> Message </label>
+                        <textarea {...register("Text:")}
+                            value={textarea} autoComplete="off" 
+                            onChange={handleChange} 
+                        />
                 </div>
-                <Button variant="info" type="submit" onClick={handleSubmit}> Submit</Button>
-            </form>
-                <p style={{top: "40px", color: "#1abc9c", font: "Poppins", weight: "lighter" }}>{data}</p>
-                <div> <ModalComponent/></div>
-        </div> 
-      
+                <div> <Button variant="danger" type="submit" onClick={handleSubmit}> Submit</Button></div>
+                <p style={{top: "70px", color: "#1abc9c", font: "Poppins", weight: "lighter" }}>{inputdata}</p>
+                <div> <Button variant="warning" onClick={handleReset} value="Reset">Reset</Button></div>
+            </form>                  
+        </div>         
     </main>
   );
 }

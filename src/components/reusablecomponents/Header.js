@@ -4,23 +4,20 @@ import Logo from "./Logo";
 const Header = () => {
   return (
     <header className="header">
-      <div>
-        <Logo />
-      </div>
+      <div> <Logo /> </div> {/* Component Logo*/}
       <nav>
         <ul>
-          <li>
+          <li>{/* Link to HomePage */}
             <Link className="links" to="/">
               Home
             </Link>
           </li>
-
-          <li>
+          <li>{/* Link to AboutPage */}
             <Link className="links" to="/about">
               About
             </Link>
           </li>
-          <li>
+          <li>{/* Link to ContacttPage */}
             <Link className="links" to="/contact">
               Contact
             </Link>

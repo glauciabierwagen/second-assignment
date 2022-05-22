@@ -6,7 +6,6 @@ import Contact from "./components/Contact";
 import AboutPage from "./components/pages/AboutPage";
 import ContactPage from "./components/pages/ContactPage";
 import Footer from "./components/reusablecomponents/Footer";
-import Modal from "./components/Modal";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

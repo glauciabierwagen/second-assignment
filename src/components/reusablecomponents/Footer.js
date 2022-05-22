@@ -1,38 +1,33 @@
 import { Link } from "react-router-dom";
-import LogoFooter from "./LogoFooter";
 
 const Footer = () => {
   return (
-    <footer className="header">
-     
+    <footer className="footer">     
       <nav>
       <ul>
-      <li>
-            <a href className="links" to="https://github.com/glauciabierwagen">
-           Bierwagen <i class="fa fa-github"></i>
-            </a>
-          </li>
-
-     
-        <li>
-            <Link className="links" to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="links" to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="links" to="/contact">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-  
-     </footer>
+        <li>{/* Link Github, but for now it doesn't work */}
+          <a href="./https://github.com/glauciabierwagen" target="_blank" rel="noopener noreferrer" className="links">
+            Bierwagen <i class="fa fa-github"></i>
+          </a>
+        </li>     
+        <li>{/* Link to HomePage */}
+          <Link className="links" to="/"> 
+            Home
+          </Link>
+        </li>
+        <li>{/* Link to AboutPage */}
+          <Link className="links" to="/about">
+            About
+          </Link>
+        </li>
+        <li>{/* Link to ContacttPage */}
+          <Link className="links" to="/contact">
+            Contact
+          </Link>
+        </li>
+      </ul>
+    </nav>  
+  </footer>
   );
 };
 
