@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
+{/* Header Settings*/}  
+
 const Header = () => {
   return (
     <header className="header">
@@ -17,7 +19,7 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li>{/* Link to ContacttPage */}
+          <li>{/* Link to ContactPage */}
             <Link className="links" to="/contact">
               Contact
             </Link>

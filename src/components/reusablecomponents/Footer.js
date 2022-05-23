@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+{/* Footer Settings*/}  
+
 const Footer = () => {
   return (
     <footer className="footer">     

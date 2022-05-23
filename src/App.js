@@ -6,9 +6,6 @@ import Contact from "./components/Contact";
 import AboutPage from "./components/pages/AboutPage";
 import ContactPage from "./components/pages/ContactPage";
 import Footer from "./components/reusablecomponents/Footer";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 function App() {
   return (
@@ -28,12 +25,7 @@ function App() {
       <div>
         <Footer />
       </div>
-     
-
-    </BrowserRouter>
-    
-    
-    
+    </BrowserRouter>    
   );
 }
 

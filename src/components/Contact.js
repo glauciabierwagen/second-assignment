@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from 'react-bootstrap/Button';
-import ModalApp from "./Modal/ModalText";
+import ButtonComponent from "./reusablecomponents/ButtonComponent";
+
 
 function Contact() {
     const [firstName, setFirstName] = useState(""); {/* Use state() is a hook that allows you to have state variables in functional components.*/}
@@ -62,6 +63,7 @@ function Contact() {
                             onChange={handleChange} 
                         />
                 </div>
+                {/*<div> <ButtonComponent  children="About me " onClick={handleSubmit} /> </div> Button reusable is not working*/} 
                 <div> <Button variant="danger" type="submit" onClick={handleSubmit}> Submit</Button></div>
                 <p style={{top: "70px", color: "#1abc9c", font: "Poppins", weight: "lighter" }}>{inputdata}</p>
                 <div> <Button variant="warning" onClick={handleReset} value="Reset">Reset</Button></div>

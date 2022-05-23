@@ -1,41 +1,41 @@
 import { Link } from "react-router-dom";
 import AboutImageDisplay from "./images/ProgrImage";
 import AboutImageLanguage from "./images/LangImage";
-import AppTest from "./Modal/ModalText";
+import ModalApp from "./Modal/ModalText";
 
-
+{/* About Settings*/}
 const About = () => {
   return (
     <main> 
       <div className="layout_about">
         <div className="home_about1">
-          <div className="card">
+          <div className="card">{/* First card*/}
             <div>
               <h2 className="card__title">Programming skills</h2>
               <p className="card__info">
                 <li> Learning Manage Systems: Canva, Moodle.  </li>
                 <li> HTML, CSS, Sass, Bootstrap and Git/ GitHub. </li>
               </p>
-              <div> <AppTest/>  </div>
+              <div> <ModalApp/>  </div>{/* Modal*/}  
             </div>
           </div>
-          <div className="card"> 
+          <div className="card">{/* Second card*/} 
             <div> 
               <div className="card__img">
-                <div> <AboutImageDisplay/></div>
+                <div> <AboutImageDisplay/></div>{/* Image*/}
               </div>
             </div>
           </div>
         </div>     
         <div className="home_about2">
-          <div className="card"> 
+          <div className="card">{/* Third card*/}  
             <div> 
               <div className="card__img">
-                <div> <AboutImageLanguage/></div>
+                <div> <AboutImageLanguage/></div>{/* Image*/}
               </div>
             </div>
           </div>
-          <div className="card">
+          <div className="card">{/* Fourth card*/}  
             <div>
               <h2 className="card__title">Language skills</h2>
                 <p className="card__info">  

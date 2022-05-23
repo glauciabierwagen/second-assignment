@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 
+{/* ContactPage Settings*/}  
+
 const ContactPage = () => {
 const params = useParams();
  return (

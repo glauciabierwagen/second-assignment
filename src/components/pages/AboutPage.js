@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 
+{/* AboutPage Settings*/}  
+
 const AboutPage = () => {
 const params = useParams();
  return (
