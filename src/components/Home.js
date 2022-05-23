@@ -16,7 +16,7 @@ const Home = () => {
           <p className="card__info">
             "I believe that learning is the creation of possibilities, discovery, 
             the exercise of imagination and enchantment with the things of life." 
-            </p>               
+          </p>               
       </div>
     </div>
       <div className="card">{/* Second Card*/} 
