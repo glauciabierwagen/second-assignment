@@ -1,4 +1,5 @@
 # React App Portfolio
+<b> Course IT Women </b>
 
 In this second assignment you are going to work with React and create a portfolio web page. I will not judge you on any styles or design so feel fre to use as less, or much, css styles as you want to. The design is not important and do not put too much time on it before you made sure that you have done all of the requirements in the assignment.
 
